@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment22">
+
+    <fragment
+        android:id="@+id/homeFragment22"
+        android:name="com.isaac.fragementmanager.HomeFragment"
+        android:label="fragment_home2"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment22_to_newFragment2"
+            app:destination="@id/newFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/newFragment2"
+        android:name="com.isaac.fragementmanager.fragment.NewFragment"
+        android:label="fragment_new"
+        tools:layout="@layout/fragment_new" >
+        <action
+            android:id="@+id/action_newFragment2_to_homeFragment22"
+            app:destination="@id/homeFragment22" />
+        <argument
+            android:name="greeting"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>

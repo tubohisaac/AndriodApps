@@ -8,22 +8,22 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
-import com.isaac.fragementmanager.databinding.FragmentHome2Binding
+import com.isaac.fragementmanager.databinding.FragmentHomeBinding
 import com.isaac.fragementmanager.fragment.NewFragment
 
 
-class HomeFragment2 : Fragment() {
+class HomeFragment : Fragment() {
     private lateinit var manager : FragmentManager
-    private lateinit var binding: FragmentHome2Binding
-    override fun onCreateView(
+    private lateinit var binding: FragmentHomeBinding
 
+    override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentHome2Binding.inflate(inflater, container, false)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
         binding.apply {
             nextButton.setOnClickListener {
-                openNextFragment()
+                openNextFragmentkt()
 
             }
         }
@@ -31,7 +31,7 @@ class HomeFragment2 : Fragment() {
         return binding.root
     }
 
-private fun openNextFragment(){
+private fun openNextFragmentkt(){
     manager.commit {
         replace<NewFragment>(R.id.fragmentContainerView)
         setReorderingAllowed(true)
@@ -39,7 +39,7 @@ private fun openNextFragment(){
 
     }
 }
-                }
+}
 
 
 

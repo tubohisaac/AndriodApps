@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.isaac.fragementmanager.R
-import com.isaac.fragementmanager.databinding.FragmentHome2Binding
+import com.isaac.fragementmanager.databinding.FragmentHomeBinding
 import com.isaac.fragementmanager.databinding.FragmentNewBinding
 
 
