@@ -15,5 +15,6 @@ class MainViewModel: ViewModel() {
             userLiveData.postValue(RetrofitProvider.placeHolderAPI.getItems())
         }
 
-    }
-}
+        }
+
+       }
