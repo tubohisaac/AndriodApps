@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
+import androidx.navigation.findNavController
 import com.isaac.fragementmanager.databinding.FragmentHomeBinding
 import com.isaac.fragementmanager.fragment.NewFragment
 
@@ -32,14 +33,12 @@ class HomeFragment : Fragment() {
     }
 
 private fun openNextFragmentkt(){
-    manager.commit {
-        replace<NewFragment>(R.id.fragmentContainerView)
-        setReorderingAllowed(true)
-        addToBackStack("")
+    val action = HomeFragmentDirections.actionHomeFragment22ToNewFragment2("myworld")
+    requireActivity().findNavController(R.id.fragmentContainerView).navigate(R.id.action_homeFragment22_to_newFragment2)
 
     }
 }
-}
+
 
 
 
